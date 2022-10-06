@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { readMessage, singlePhoto } from "../../store/slices/photosSlice";
 import  ErrorMessage  from "../errorMessage/ErrorMessage";
 import Spinner from '../spinner/Spinner';
+import {addFavorite} from "../../halpers/halpers"
 
 import "./mainPage.modules.scss"
 
@@ -35,30 +36,6 @@ const MainPage = () => {
       return <ErrorMessage/>
    }
 
-   const getLocalPhotos = () => {
-      const photosLocal = localStorage.getItem("arr")
-      if(photosLocal !== null){
-         return JSON.parse(photosLocal)
-      }else{
-         return []
-      }
-   }
-
-   const addFavorite = (id) => {
-      let photos = getLocalPhotos()
-      let arr = photosList[id]
-      let users = photos.find(item => item.id === arr.id)
-      let index = photos.indexOf(users)
-      if(!users){
-         photos.push(arr)
-         favoriteBtn.current[id].classList.add("active")
-      }else{
-         photos.splice(index, 1)
-         favoriteBtn.current[id].classList.remove("active")
-      } 
-      localStorage.setItem("arr", JSON.stringify(photos))
-   }
-
    function renderItems (arr){
       const items = arr.map((item, index) => {
             return(
@@ -72,7 +49,7 @@ const MainPage = () => {
                      </div>
                      <div className='char__buttons'>
                         <Link onClick={() => dispatch(singlePhoto(photosList[index]))} to={`/${item.id}`} className="char__button">details</Link>
-                        <button ref={addBtn} onClick={(e) => addFavorite(index)} className='char__add'>favorites</button>
+                        <button ref={addBtn} onClick={(e) => addFavorite(index, photosList, favoriteBtn)} className='char__add'>favorites</button>
                      </div>
                </li>
             )

@@ -8,7 +8,6 @@ const initialState = {
    term: "",
    filterPhotos: [],
    photosLoadingStatus: 'idle',
-   favorites: [],
    activeCatalog: ""
 }
 
@@ -35,16 +34,13 @@ const photosSlice = createSlice({
                state.term = action.payload
             },
       filteredPhotos: (state, action) => {
-               state.filterPhotos = state.photosList.filter(item => item.title.startsWith(state.term))
+               state.filterPhotos = state.photosList.filter(item => item.title.startsWith(action.payload))
             },
       filterABC: state => {
          state.photosList = state.photosList.sort((a, b) => a.title > b.title ? 1 : -1)
       },
       filterAlbum: state => {
          state.photosList = state.photosList.sort((a, b) => a.album > b.album ? 1 : -1)
-      },
-      favoriteFetched: (state, action) => {
-               state.favorites = JSON.parse(localStorage.getItem("arr"))
       },
       activeCatalogChanged: (state, action) => {
          state.activeCatalog = action.payload
@@ -72,6 +68,5 @@ export const {
    filteredPhotos,
    filterABC,
    filterAlbum,
-   favoriteFetched,
    activeCatalogChanged
 } = actions

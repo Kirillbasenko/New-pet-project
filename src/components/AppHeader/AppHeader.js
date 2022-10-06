@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import {signOut, getAuth} from "firebase/auth";
 import {removeUser} from "../../store/slices/userSlise"
 import { filteredPhotos, searchFrom, filterAlbum, filterABC, activeCatalogChanged } from "../../store/slices/photosSlice"
+import { filteredFavorites, filterABCFavorites, filterAlbumFavorites } from "../../store/slices/favoritesSlice"
 
 import style from "./appHeader.module.css"
 
@@ -32,12 +33,17 @@ const AppHeader = () => {
             <Link className={style.create} to="/create">Create photo</Link>
             <Link className={style.logo} to="/">Photos project</Link>
             <Link to="/favorit" className={style.favorite}>Favorite</Link>
-            <button onClick={() => dispatch(filterABC())} className={style.abc}>Sort alphabetically</button>
-            <button onClick={() => dispatch(filterAlbum())} className={style.album}>Sort №Album</button>
+            <button onClick={() => {
+               dispatch(filterABC())
+               dispatch(filterABCFavorites())}} className={style.abc}>Sort alphabetically</button>
+            <button onClick={() => {
+               dispatch(filterAlbum())
+               dispatch(filterAlbumFavorites())}} className={style.album}>Sort №Album</button>
             <input 
                onChange={(e) => {
                   dispatch(searchFrom(e.target.value))
-                  dispatch(filteredPhotos())
+                  dispatch(filteredPhotos(e.target.value))
+                  dispatch(filteredFavorites(e.target.value))
                }}
                className={style.search} 
                placeholder='search' 

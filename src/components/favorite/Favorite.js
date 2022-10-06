@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { favoriteFetched } from "../../store/slices/photosSlice";
+import { favoriteFetched } from "../../store/slices/favoritesSlice";
 
 
 const Favorites = () => {
-   const {favorites, filterPhotos, term} = useSelector(state => state.photos)
+   const {filterPhotos, term} = useSelector(state => state.photos)
+   const {favorites} = useSelector(state => state.favorite)
    const dispatch = useDispatch()
 
    useEffect(() => {
