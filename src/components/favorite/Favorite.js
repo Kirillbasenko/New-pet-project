@@ -21,7 +21,7 @@ const Favorites = () => {
                <div className="favorite">
                   <Link className="favorite__wrap"
                      onClick={() => dispatch(singlePhoto(favorites[index]))} 
-                     to={`/${item.key}`}>
+                     to={`/photo/${item.key}`}>
                      <li 
                         className="favorite__item"
                         key={item.key}>

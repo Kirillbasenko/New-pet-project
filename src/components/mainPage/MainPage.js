@@ -23,7 +23,7 @@ const MainPage = () => {
    }, [])
 
    if(!localStorage.getItem("isAuthEmail")){
-      navigate("New-pet-project/login", { replace: true })
+      navigate("/login", { replace: true })
    }
 
    const addBtn = (el) => {
@@ -49,7 +49,7 @@ const MainPage = () => {
                   <Link 
                      className="char__wrap"
                      onClick={() => dispatch(singlePhoto(photosList[index]))} 
-                     to={`/${item.key}`}>
+                     to={`/photo/${item.key}`}>
                      <li 
                         className="char__item"
                         key={item.key}>
