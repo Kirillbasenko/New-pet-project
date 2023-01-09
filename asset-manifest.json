@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/New-pet-project/login/static/css/main.8bfd6b38.css",
-    "main.js": "/New-pet-project/login/static/js/main.9181f7cb.js",
+    "main.js": "/New-pet-project/login/static/js/main.de207b2a.js",
     "static/media/sarandy-westfall-qqd8APhaOg4-unsplash.jpg": "/New-pet-project/login/static/media/sarandy-westfall-qqd8APhaOg4-unsplash.b4b1ce439f01da3b982f.jpg",
     "static/media/soragrit-wongsa-aV5xrpB0bwQ-unsplash.jpg": "/New-pet-project/login/static/media/soragrit-wongsa-aV5xrpB0bwQ-unsplash.58451c7971b3b7b0c200.jpg",
     "static/media/joanna-kosinska-spAkZnUleVw-unsplash.jpg": "/New-pet-project/login/static/media/joanna-kosinska-spAkZnUleVw-unsplash.99678caa364b53cf7324.jpg",
     "static/media/error.gif": "/New-pet-project/login/static/media/error.42292aa12b6bc303ce99.gif",
     "index.html": "/New-pet-project/login/index.html",
     "main.8bfd6b38.css.map": "/New-pet-project/login/static/css/main.8bfd6b38.css.map",
-    "main.9181f7cb.js.map": "/New-pet-project/login/static/js/main.9181f7cb.js.map"
+    "main.de207b2a.js.map": "/New-pet-project/login/static/js/main.de207b2a.js.map"
   },
   "entrypoints": [
     "static/css/main.8bfd6b38.css",
-    "static/js/main.9181f7cb.js"
+    "static/js/main.de207b2a.js"
   ]
 }
