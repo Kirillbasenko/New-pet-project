@@ -12,7 +12,7 @@ const SinglePhoto = () => {
             <div className="single__title">{item.title}</div>
             <div className="single__id">ID: {item.id}</div>
             <div className="single__album">Album: {item.album}</div>
-            <Link to="/" className="single__button">
+            <Link to="New-pet-project/" className="single__button">
                <img className="single__back" src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="" />
                <div className="">Back</div> 
             </Link>
