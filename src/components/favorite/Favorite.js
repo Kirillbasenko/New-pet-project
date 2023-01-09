@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
+
 import { favoriteFetched } from "../../store/slices/favoritesSlice";
 import { singlePhoto } from "../../store/slices/photosSlice";
-
 import "./favorite.scss"
 
 const Favorites = () => {

@@ -1,9 +1,9 @@
 import { useState, useRef } from "react"
 import { addDoc, collection } from "firebase/firestore";
-import {db} from "../../fireBase"
 import * as Yup from "yup";
 import { useFormik } from "formik";
 
+import {db} from "../../fireBase"
 import "./createPhoto.scss"
 
 const CreatePhoto = () => {

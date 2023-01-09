@@ -1,6 +1,7 @@
-import "./singlePhoto.scss"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux";
+
+import "./singlePhoto.scss"
 
 const SinglePhoto = () => {
    const {photo} = useSelector(state => state.photos)

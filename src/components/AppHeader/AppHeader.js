@@ -2,10 +2,10 @@ import {useNavigate, Link} from 'react-router-dom'
 import { useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"; 
 import {signOut, getAuth} from "firebase/auth";
-import {removeUser} from "../../store/slices/userSlise";
+
 import { filteredPhotos, searchFrom, filterAlbum, filterABC, activeCatalogChanged } from "../../store/slices/photosSlice"
 import { filteredFavorites, filterABCFavorites, filterAlbumFavorites, activeFilterCatalogChanged } from "../../store/slices/favoritesSlice"
-
+import {removeUser} from "../../store/slices/userSlise";
 import style from "./appHeader.module.css"
 
 const AppHeader = () => {

@@ -1,12 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from "react-redux";
+
 import { readMessage, singlePhoto, deletePhoto } from "../../store/slices/photosSlice";
 import { deleteFavoritePhoto } from "../../store/slices/favoritesSlice";
 import  ErrorMessage  from "../errorMessage/ErrorMessage";
 import Spinner from '../spinner/Spinner';
 import {addFavorite} from "../../halpers/halpers"
-
 import "./mainPage.scss"
 
 const MainPage = () => {
@@ -16,7 +16,6 @@ const MainPage = () => {
    favoriteBtn.current = []
    
    const {photosList, photosLoadingStatus, term, filterPhotos, activeCatalog} = useSelector(state => state.photos)
-   console.log(photosList);
 
    useEffect(() => {
       dispatch(readMessage())
@@ -34,6 +33,8 @@ const MainPage = () => {
 
    if(photosLoadingStatus === "error"){
       return <ErrorMessage/>
+   } else if(photosLoadingStatus === "loading"){
+      return <Spinner/>
    }
 
    function renderItems (arr){
@@ -78,7 +79,6 @@ const MainPage = () => {
 
    return(
       <div className='main-back'>
-         {photosLoadingStatus === "loading" ? <Spinner/> : null}
          <div className="char__list">
                {term || activeCatalog ? filterItems : items}
          </div>

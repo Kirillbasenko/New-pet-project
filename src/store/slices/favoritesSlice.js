@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { doc, deleteDoc } from "firebase/firestore";
-import { db } from "../../fireBase"
 
 const initialState = {
    favorites: [],

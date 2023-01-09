@@ -11,8 +11,11 @@ const getLocalPhotos = () => {
 export const addFavorite = (id, photo, btns) => {
    let photos = getLocalPhotos()
    let arr = photo[id]
-   let users = photos.find(item => item.id === arr.id)
+   console.log(arr);
+   let users = photos.find(item => item.key === arr.key)
+   console.log(users);
    let index = photos.indexOf(users)
+   console.log(index);
    if(!users){
       photos.push(arr)
       btns.current[id].classList.add("active")
