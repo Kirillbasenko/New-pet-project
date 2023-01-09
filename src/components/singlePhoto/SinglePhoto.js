@@ -8,11 +8,14 @@ const SinglePhoto = () => {
    const renderItem = (item) => {
       return(
          <div className="single">
-            <img src={item.src} alt={item.title} />
+            <img className="single__image" src={item.src} alt={item.title} />
+            <div className="single__title">{item.title}</div>
             <div className="single__id">ID: {item.id}</div>
             <div className="single__album">Album: {item.album}</div>
-            <div className="single__title">{item.title}</div>
-            <Link to="/" className="single__button">Back</Link>
+            <Link to="/" className="single__button">
+               <img className="single__back" src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="" />
+               <div className="">Back</div> 
+            </Link>
          </div>
       )
    }

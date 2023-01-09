@@ -69,8 +69,16 @@ const LoginPage = () => {
       <div className='back'>
          <div className="login-page">
             <div className="form">
-               <button id='google-button' onClick={() => signIn()}>Ввойти с помощью Google</button>
+               <div className="title">LOGIN</div>
+               <button id='google-button' >
+                  <img 
+                     onClick={() => signIn()} 
+                     className="image" 
+                     src="https://storage.googleapis.com/support-kms-prod/ZAl1gIwyUsvfwxoW9ns47iJFioHXODBbIkrK"
+                     alt="google" />
+               </button>
                <form onSubmit={formik.handleSubmit}  className="login-form">
+                  <div className="upInput">Email</div>
                   <input type="email" 
                      placeholder="email"
                      onChange={formik.handleChange} 
@@ -79,6 +87,7 @@ const LoginPage = () => {
                      id="inputEmail"
                      onBlur={formik.handleBlur}/>
                      {formik.errors.email && formik.touched.email ? <div>{formik.errors.email}</div> : null}
+                  <div className="upInput">Password</div>
                   <input type="password" 
                      placeholder="password"
                      onChange={formik.handleChange} 
@@ -87,10 +96,10 @@ const LoginPage = () => {
                      id="inputPassword"
                      onBlur={formik.handleBlur}/>
                      {formik.errors.password && formik.touched.password  ? <div>{formik.errors.password}</div> : null}
-                  <button type='submit'>login</button>
+                  <button className="login" type='submit'>login</button>
                   <div ref={error} className="not-user">Пользователь не найден</div>
                   <div ref={success} className="yes-user">Успешно</div>
-                  <p className="message">Not registered? <Link to="/register">Create an account</Link></p>
+                  <p className="message">Need an account? <Link to="/register">SIGN UP</Link></p>
                </form>
             </div>
          </div>

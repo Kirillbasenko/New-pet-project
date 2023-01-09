@@ -52,8 +52,10 @@ const RegisterPage = () => {
    return(
       <div className='back'>
          <div className="login-page">
-            <div className="form">
+            <div className="form" >
+               <div className="title" style={{marginBottom: "60px"}}>SIGN UP</div>
                <form onSubmit={formik.handleSubmit}  className="login-form">
+                  <div className="upInput">Email</div>
                   <input type="email" 
                      placeholder="email"
                      onChange={formik.handleChange} 
@@ -62,6 +64,7 @@ const RegisterPage = () => {
                      id="inputEmail"
                      onBlur={formik.handleBlur}/>
                      {formik.errors.email && formik.touched.email ? <div>{formik.errors.email}</div> : null}
+                     <div className="upInput">Password</div>
                   <input type="password" 
                      placeholder="password"
                      onChange={formik.handleChange} 
@@ -70,10 +73,10 @@ const RegisterPage = () => {
                      id="inputPassword"
                      onBlur={formik.handleBlur}/>
                      {formik.errors.password && formik.touched.password  ? <div>{formik.errors.password}</div> : null}
-                  <button type='submit'>login</button>
+                  <button className="login" type='submit'>sing up</button>
                   <div ref={error} className="not-user">Пользователь уже зерегистрирован</div>
                   <div ref={success} className="yes-user">Успешно</div>
-                  <p className="message">Not registered? <Link to="/login">Create an account</Link></p>
+                  <p className="message">Already a user? <Link to="/login">LOGIN</Link></p>
                </form>
             </div>
          </div>

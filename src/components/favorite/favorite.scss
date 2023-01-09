@@ -1,0 +1,111 @@
+.favorite {
+   border: none;
+   background: none;
+   transition: 0.3s transform;
+   border-radius: 30px 30px 30px 30px;
+   &:hover {
+            box-shadow: 0 5px 20px rgb(141, 14, 14);
+            transform: translateY(-8px);
+      }
+   &__content {
+      margin-bottom: 10px;
+   }
+   &__wrap{
+      text-decoration: none;
+      color: black;
+   }
+   &__grid {
+      padding: 10px 20px 0px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 20px;
+      row-gap: 30px;
+   }
+   &__heart{
+      margin-top: 10px;
+      width: 30px;
+      height: 30px;
+   }
+   &__image{
+      border-radius: 30px 30px 0px 0px;
+      margin: 0 auto;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+   }
+   &__item {
+      border-radius: 30px;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      background: #fce4ce;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
+   }
+   &__name {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 29px;
+      text-decoration: none;
+      color: rgb(10, 10, 10);
+      list-style: none;
+   }
+   &__album{
+      font-size: 18px;
+   }
+
+   &__buttons{
+      padding-bottom: 10px;
+      background: #fce4ce;
+      border-radius: 0px 0px 30px 30px;
+   }
+}
+
+.active{
+   background: rgb(253, 109, 109);
+}
+
+.favorite-back{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   padding: 80px 0px 0px 0px;
+   width: 100%;
+   min-height: 100vh;
+   object-fit: contain;
+   background: url(../../../img/soragrit-wongsa-aV5xrpB0bwQ-unsplash.jpg) 0 0/100% 100%;
+}
+
+/*@media(max-width: 900px){
+   .favorite{
+      &__grid{
+         grid-template-columns: repeat(3, 1fr);
+         column-gap: 15px;
+         row-gap: 30px;
+      }
+   }
+}
+
+@media(max-width: 660px){
+   .favorite{
+      &__grid{
+         grid-template-columns: repeat(2, 1fr);
+         column-gap: 10px;
+         row-gap: 25px;
+      }
+   }
+}
+
+@media(max-width: 450px){
+   .favorite{
+      &__grid{
+         grid-template-columns: repeat(1, 1fr);
+         column-gap: 20px;
+         row-gap: 20px;
+      }
+   }
+}*/

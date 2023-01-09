@@ -1,62 +1,221 @@
 .header{
-   height: 50px;
-   position: relative;
-   background-color: rgb(217, 255, 255);
+   height: 60px;
+   background-color: rgba(0, 0, 0, 0.8);
 }
 
 .out{
    position: absolute;
    right: 20px;
-   top: 10px;
-   padding: 5px;
-}
-
-.abc{
-   position: absolute;
-   right: 270px;
-   top: 10px;
-   padding: 5px;
-}
-
-.album{
-   position: absolute;
-   right: 400px;
-   top: 10px;
-   padding: 5px;
+   top: 8px;
+   border: none;
+   background: none;
+   padding: 8px;
+   cursor: pointer;
 }
 
 .search{
    position: absolute;
-   right: 80px;
-   top: 10px;
-   padding: 5px;
+   left: 45%;
+   top: 17px;
+   padding: 7px 5px 7px 5px;
+   min-width: 300px;
+   border-radius: 12px;
 }
 
 .favorite{
    position: absolute;
-   right: 500px;
-   top: 10px;
+   right: 210px;
+   top: 30px;
    padding: 5px;
-}
-
-.logo{
-   font-size: 30px;
-   position: absolute;
-   left: 10px;
-   top: 5px;
-   padding: 5px;
+   text-decoration: none;
+   color: rgb(252, 67, 67);
 }
 
 .create{
    position: absolute;
-   right: 560px;
-   top: 10px;
+   right: 100px;
+   top: 30px;
    padding: 5px;
+   text-decoration: none;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   color: rgb(27, 179, 27);
+   
 }
 
-.select{
+.createIcon{
    position: absolute;
-   right: 660px;
-   top: 10px;
+   right: 135px;
+   top: 11px;
+   width: 20px;
+   height: 20px;
+}
+
+.image{
+   position: absolute;
+   
+   right: 231px;
+   top: 11px;
+   width: 20px;
+   height: 20px;
+}
+
+.logo{
+   font-size: 30px;
+   line-height: 60px;
+   color: rgb(221, 134, 4);
+   text-decoration: none;
+   padding-left: 10px;
+}
+
+
+
+.select{
+   padding: 3px;
+   border-radius: 10px;
+   background-color: rgb(221, 134, 4);
+   margin-left: 20px;
+   cursor: pointer;
+}
+
+.abc{
    padding: 5px;
+   border-radius: 10px;
+   border: none;
+   margin-left: 20px;
+   cursor: pointer;
+}
+
+.alb{
+   padding: 5px;
+   border-radius: 10px;
+   border: none;
+   margin-left: 20px;
+   cursor: pointer;
+}
+
+.imageOut{
+   background: none;
+   width: 30px;
+   height: 30px;
+}
+
+@media(max-width: 1100px){
+   .logo{
+      font-size: 25px;
+   }
+
+   .search{
+      left: 45%;
+      min-width: 230px;
+   }
+
+   .abc{
+      font-size: 12px;
+      margin-left: 15px;
+   }
+
+   .alb{
+      font-size: 12px;
+      margin-left: 15px;
+   }
+
+   .select{
+      font-size: 12px;
+      margin-left: 15px;
+   }
+
+   .favorite{
+      right: 180px;
+   }
+
+   .create{
+      right: 80px;
+      top: 30px;
+   }
+
+   .createIcon{
+      right: 115px;
+   }
+
+   .image{
+      right: 201px;
+   }
+}
+
+@media(max-width: 900px){
+   .search{
+      left: 47%;
+      min-width: 145px;
+   }
+   .logo{
+      font-size: 22px;
+   }
+
+   .abc{
+      margin-left: 13px;
+      padding: 7px 2px;
+   }
+
+   .alb{
+      padding: 7px 2px;
+      margin-left: 13px;
+   }
+
+   .select{
+      width: 50px;
+      padding: 5px 0px;
+      margin-left: 13px;
+   }
+
+   .out{
+      right: 10px;
+      padding: 5px;
+   }
+
+   .favorite{
+      right: 150px;
+   }
+
+   .create{
+      right: 55px;
+      top: 30px;
+   }
+
+   .createIcon{
+      right: 90px;
+   }
+
+   .image{
+      right: 170px;
+   }
+}
+
+@media(max-width: 750px){
+   .search{
+      display: none;
+   }
+}
+
+@media(max-width: 560px){
+   .abc{
+      display: none;
+   }
+
+   .alb{
+      display: none;
+   }
+
+   .select{
+      width: 50px;
+      padding: 5px 0px;
+      margin-left: 13px;
+   }
+}
+
+@media(max-width: 420px){
+   .select{
+      display: none;
+   }
 }
