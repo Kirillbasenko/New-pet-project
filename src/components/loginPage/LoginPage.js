@@ -25,7 +25,7 @@ const LoginPage = () => {
                id: users.uid, 
                token: users.accessToken, 
             }))
-            navigate('/')
+            navigate('/New-pet-project/')
          } else{
             error.current.style.display = "block"
          }
@@ -42,7 +42,7 @@ const LoginPage = () => {
                token: user.accessToken, 
             })); 
          success.current.style.display = "block"
-         navigate('/')
+         navigate('/New-pet-project/')
       })
       .catch(() => {
          error.current.style.display = "block"
