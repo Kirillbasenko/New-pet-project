@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/New-pet-project/static/css/main.9c2097a8.css",
-    "main.js": "/New-pet-project/static/js/main.c72be573.js",
+    "main.js": "/New-pet-project/static/js/main.8fc13cdd.js",
     "static/media/sarandy-westfall-qqd8APhaOg4-unsplash.jpg": "/New-pet-project/static/media/sarandy-westfall-qqd8APhaOg4-unsplash.b4b1ce439f01da3b982f.jpg",
     "static/media/soragrit-wongsa-aV5xrpB0bwQ-unsplash.jpg": "/New-pet-project/static/media/soragrit-wongsa-aV5xrpB0bwQ-unsplash.58451c7971b3b7b0c200.jpg",
     "static/media/joanna-kosinska-spAkZnUleVw-unsplash.jpg": "/New-pet-project/static/media/joanna-kosinska-spAkZnUleVw-unsplash.99678caa364b53cf7324.jpg",
     "static/media/error.gif": "/New-pet-project/static/media/error.42292aa12b6bc303ce99.gif",
     "index.html": "/New-pet-project/index.html",
     "main.9c2097a8.css.map": "/New-pet-project/static/css/main.9c2097a8.css.map",
-    "main.c72be573.js.map": "/New-pet-project/static/js/main.c72be573.js.map"
+    "main.8fc13cdd.js.map": "/New-pet-project/static/js/main.8fc13cdd.js.map"
   },
   "entrypoints": [
     "static/css/main.9c2097a8.css",
-    "static/js/main.c72be573.js"
+    "static/js/main.8fc13cdd.js"
   ]
 }
