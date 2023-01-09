@@ -13,7 +13,7 @@ function App() {
     <Router>
       <AppHeader/>
         <Routes>
-          <Route path="/" element={<MainPage/>}/>
+          <Route path="New-pet-project/" element={<MainPage/>}/>
           {/*<Route path="login" element={<LoginPage/>}/>
           <Route path="register" element={<RegisterPage/>}/>*/}
           <Route path="photo/:photoId/" element={<SinglePhoto/>}/>
