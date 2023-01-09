@@ -34,7 +34,7 @@
 .create{
    position: absolute;
    right: 100px;
-   top: 30px;
+   top: 31px;
    padding: 5px;
    text-decoration: none;
    text-align: center;
@@ -132,7 +132,6 @@
 
    .create{
       right: 80px;
-      top: 30px;
    }
 
    .createIcon{
@@ -180,7 +179,6 @@
 
    .create{
       right: 55px;
-      top: 30px;
    }
 
    .createIcon{
@@ -217,5 +215,26 @@
 @media(max-width: 420px){
    .select{
       display: none;
+   }
+      .createIcon{
+      right: 80px;
+   }
+
+   .image{
+      right: 147px;
+   }
+
+   .favorite{
+      right: 130px;
+      font-size: 14px;
+   }
+
+   .create{
+      right: 50px;
+      font-size: 14px;
+   }
+
+   .logo{
+      font-size: 21px;
    }
 }
