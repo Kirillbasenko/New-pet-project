@@ -19,7 +19,7 @@ const AppHeader = () => {
       signOut(getAuth());
       dispatch(removeUser())
       localStorage.removeItem("isAuthEmail")
-      navigate("New-pet-project/login", { replace: true })
+      navigate("/login", { replace: true })
    }
 
    return(

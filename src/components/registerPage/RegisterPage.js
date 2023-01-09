@@ -25,7 +25,7 @@ const RegisterPage = () => {
                id: user.uid, 
                token: user.accessToken, 
             }))
-         navigate("New-pet-project/")
+         navigate("/New-pet-project/")
       })
       .catch(() => {
          error.current.style.display = "block"
