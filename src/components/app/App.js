@@ -14,8 +14,8 @@ function App() {
       <AppHeader/>
         <Routes>
           <Route path="New-pet-project/" element={<MainPage/>}/>
-          <Route path="/login" element={<LoginPage/>}/>
-          <Route path="/register" element={<RegisterPage/>}/>
+          <Route path="New-pet-project/login" element={<LoginPage/>}/>
+          <Route path="New-pet-project/register" element={<RegisterPage/>}/>
           <Route path="/:photoId" element={<SinglePhoto/>}/>
           <Route path="/favorit" element={<Favorites/>}/>
           <Route path="/create" element={<CreatePhoto/>}/>
