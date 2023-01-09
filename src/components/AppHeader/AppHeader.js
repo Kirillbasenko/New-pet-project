@@ -19,14 +19,14 @@ const AppHeader = () => {
       signOut(getAuth());
       dispatch(removeUser())
       localStorage.removeItem("isAuthEmail")
-      navigate("../login", { replace: true })
+      navigate("/login", { replace: true })
    }
 
    return(
       <>
          {isAuth ? 
             <div className={style.header}>
-               <Link className={style.logo} to="/">
+               <Link className={style.logo} to="New-pet-project/">
                   Photo Gallery
                </Link>
                <select 

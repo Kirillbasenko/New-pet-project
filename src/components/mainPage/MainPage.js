@@ -23,7 +23,7 @@ const MainPage = () => {
    }, [])
 
    if(!localStorage.getItem("isAuthEmail")){
-      navigate("/login", { replace: true })
+      navigate("New-pet-project/login", { replace: true })
    }
 
    const addBtn = (el) => {

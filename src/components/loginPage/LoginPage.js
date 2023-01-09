@@ -42,7 +42,7 @@ const LoginPage = () => {
                token: user.accessToken, 
             })); 
          success.current.style.display = "block"
-         navigate('/')
+         navigate('/New-pet-project/')
       })
       .catch(() => {
          error.current.style.display = "block"
