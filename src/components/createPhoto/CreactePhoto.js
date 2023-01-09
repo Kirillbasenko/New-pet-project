@@ -1,6 +1,5 @@
 import { useState, useRef } from "react"
 import { addDoc, collection } from "firebase/firestore";
-import { useSelector } from "react-redux";
 import {db} from "../../fireBase"
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -44,10 +43,10 @@ const formik = useFormik({
       },
       validationSchema: Yup.object({
          album: Yup.number()
-                  .required("Обязательное поле"),
+                  .required("Required field"),
          title: Yup.string()
-                  .min(5, "Минимум 5 символа")
-                  .required("Обязательное поле"),
+                  .min(5, "Minimum 3 symbols")
+                  .required("Required field"),
       }),
       onSubmit: savePhoto
    })

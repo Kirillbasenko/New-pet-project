@@ -74,7 +74,6 @@ const MainPage = () => {
    } 
 
    const items = renderItems(photosList)
-   //const items = renderItems(selectAll)
    const filterItems = renderItems(filterPhotos)
 
    return(

@@ -7,7 +7,7 @@ import { singlePhoto } from "../../store/slices/photosSlice";
 import "./favorite.scss"
 
 const Favorites = () => {
-   const {term, photosList} = useSelector(state => state.photos)
+   const {term} = useSelector(state => state.photos)
    const {favorites, activeCatalog, filterPhotos} = useSelector(state => state.favorite)
    const dispatch = useDispatch()
 

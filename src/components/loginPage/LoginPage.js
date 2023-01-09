@@ -97,8 +97,8 @@ const LoginPage = () => {
                      onBlur={formik.handleBlur}/>
                      {formik.errors.password && formik.touched.password  ? <div>{formik.errors.password}</div> : null}
                   <button className="login" type='submit'>login</button>
-                  <div ref={error} className="not-user">Пользователь не найден</div>
-                  <div ref={success} className="yes-user">Успешно</div>
+                  <div ref={error} className="not-user">User is not found</div>
+                  <div ref={success} className="yes-user">Success</div>
                   <p className="message">Need an account? <Link to="/register">SIGN UP</Link></p>
                </form>
             </div>

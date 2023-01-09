@@ -74,8 +74,8 @@ const RegisterPage = () => {
                      onBlur={formik.handleBlur}/>
                      {formik.errors.password && formik.touched.password  ? <div>{formik.errors.password}</div> : null}
                   <button className="login" type='submit'>sing up</button>
-                  <div ref={error} className="not-user">Пользователь уже зерегистрирован</div>
-                  <div ref={success} className="yes-user">Успешно</div>
+                  <div ref={error} className="not-user">User already registered</div>
+                  <div ref={success} className="yes-user">Success</div>
                   <p className="message">Already a user? <Link to="/login">LOGIN</Link></p>
                </form>
             </div>
