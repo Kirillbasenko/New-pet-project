@@ -45,7 +45,7 @@ const formik = useFormik({
          album: Yup.number()
                   .required("Required field"),
          title: Yup.string()
-                  .min(5, "Min 3 symbols")
+                  .min(3, "Min 3 symbols")
                   .required("Required field"),
       }),
       onSubmit: savePhoto
