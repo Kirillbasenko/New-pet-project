@@ -16,6 +16,14 @@ const Favorites = () => {
    }, [])
 
    function renderItems (arr){
+      if(arr.length === 0){
+         return(
+            <>
+               <div className="info">no favorites</div>
+            </>
+         )
+      }
+      console.log(arr.length);
          const items = arr.map((item, index) => {
             return(
                <div className="favorite">
@@ -45,7 +53,8 @@ const Favorites = () => {
             </ul>
       )
    }
-   const items = renderItems(favorites) 
+console.log(favorites);
+   const items = renderItems(favorites ? favorites : []) 
    const filterItems = renderItems(filterPhotos) 
 
    return(

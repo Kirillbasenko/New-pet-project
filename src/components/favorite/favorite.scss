@@ -80,6 +80,12 @@
    background: url(../../../img/soragrit-wongsa-aV5xrpB0bwQ-unsplash.jpg) 0 0/100% 100%;
 }
 
+.info{
+   text-align: center;
+   font-size: 50px;
+   color:  rgb(219, 6, 6);
+}
+
 @media(max-width: 900px){
    .favorite{
       &__grid{
