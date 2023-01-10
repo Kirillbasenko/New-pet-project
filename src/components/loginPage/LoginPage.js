@@ -56,11 +56,10 @@ const LoginPage = () => {
       },
       validationSchema: Yup.object({
          email: Yup.string()
-                  .email("Неправильный email адрес")
-                  .required("Обязательное поле"),
+                  .email("Wrong email address")
+                  .required("Required field"),
          password: Yup.string()
-                  .min(5, "Минимум 5 символа")
-                  .required("Обязательное поле"),
+                  .required("Required field"),
       }),
       onSubmit: hendlerLodin
    })
