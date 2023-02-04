@@ -21,6 +21,7 @@ export const readMessage = createAsyncThunk(
       querySnapshot.forEach(doc => {
          array.push({...doc.data(), "key": doc.id })
       })
+      
       return array;
    }
 )
