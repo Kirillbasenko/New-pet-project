@@ -34,7 +34,7 @@ const LoginPage = () => {
    }
 
    const hendlerLodin = () => {
-      const auth = getAuth(app)
+      const auth = getAuth()
       signInWithEmailAndPassword(auth, formik.values.email, formik.values.password)
       .then(({user}) => { 
          dispatch(setUser({ 
@@ -69,7 +69,7 @@ const LoginPage = () => {
       <div className='back'>
          <div className="login-page">
             <div className="form">
-               <div className="title">LOGINnnnn</div>
+               <div className="title">LOGIN</div>
                <button id='google-button' >
                   <img 
                      onClick={() => signIn()} 

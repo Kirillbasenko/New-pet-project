@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
@@ -10,8 +10,7 @@ import {addFavorite} from "../../halpers/halpers"
 import "./mainPage.scss"
 
 const MainPage = () => {
-   const dispatch = useDispatch()
-   let navigate = useNavigate() 
+   const dispatch = useDispatch() 
    const favoriteBtn = useRef([])
    favoriteBtn.current = []
    
@@ -20,10 +19,6 @@ const MainPage = () => {
    useEffect(() => {
       dispatch(readMessage())
    }, [])
-
-   /*if(!localStorage.getItem("isAuthEmail")){
-      navigate("/login", { replace: true })
-   }*/
 
    const addBtn = (el) => {
       if(el && !favoriteBtn.current.includes(el)){
