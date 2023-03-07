@@ -7,6 +7,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signI
 
 import {setUser} from "../../store/slices/userSlise"
 import "./loginPage.scss"
+import { app } from "../../fireBase";
 
 const LoginPage = () => {
    const dispatch = useDispatch(); 
@@ -15,7 +16,7 @@ const LoginPage = () => {
    const success = useRef("")
 
    async function signIn() {
-      const auth = getAuth();
+      const auth = getAuth(app);
       let provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider)
       onAuthStateChanged(auth, (users) => {
