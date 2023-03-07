@@ -3,7 +3,6 @@ import * as Yup from "yup";
 import { useDispatch} from "react-redux"; 
 import { useRef } from 'react';
 import {useNavigate, Link} from 'react-router-dom' 
-import { app } from "../../fireBase";
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 
 import {setUser} from "../../store/slices/userSlise"
