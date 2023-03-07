@@ -11,7 +11,7 @@ import "./mainPage.scss"
 
 const MainPage = () => {
    const dispatch = useDispatch()
-   //let navigate = useNavigate() 
+   let navigate = useNavigate() 
    const favoriteBtn = useRef([])
    favoriteBtn.current = []
    
