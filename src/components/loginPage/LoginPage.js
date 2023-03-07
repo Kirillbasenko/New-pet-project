@@ -69,7 +69,7 @@ const LoginPage = () => {
       <div className='back'>
          <div className="login-page">
             <div className="form">
-               <div className="title">LOGIN</div>
+               <div className="title">LOGINnnnn</div>
                <button id='google-button' >
                   <img 
                      onClick={() => signIn()} 
