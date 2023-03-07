@@ -21,9 +21,9 @@ const MainPage = () => {
       dispatch(readMessage())
    }, [])
 
-   if(!localStorage.getItem("isAuthEmail")){
+   /*if(!localStorage.getItem("isAuthEmail")){
       navigate("/login", { replace: true })
-   }
+   }*/
 
    const addBtn = (el) => {
       if(el && !favoriteBtn.current.includes(el)){
