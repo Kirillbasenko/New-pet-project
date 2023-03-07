@@ -13,12 +13,12 @@ const AppHeader = () => {
    let navigate = useNavigate() 
    const catalog = useRef(null)
    const {activeSort} = useSelector(state => state.photos)
-   //const isAuth = !!localStorage.getItem("isAuthEmail")
+   const isAuth = !!localStorage.getItem("isAuthEmail")
 
    function signOutUser() {
-      //signOut(getAuth());
+      signOut(getAuth());
       dispatch(removeUser())
-      //localStorage.removeItem("isAuthEmail")
+      localStorage.removeItem("isAuthEmail")
       navigate("/login", { replace: true })
    }
 
@@ -73,9 +73,9 @@ const AppHeader = () => {
                alt="heart" />
             <div  className={style.favorite}>Favorite</div>
          </Link>
-         {/*<button onClick={() => signOutUser()} className={style.out}>
+         <button onClick={() => signOutUser()} className={style.out}>
             <img className={style.imageOut} src="https://img.freepik.com/free-icon/logout_318-385171.jpg" alt="" />
-         </button>*/}
+         </button>
       </div>
    )
 }

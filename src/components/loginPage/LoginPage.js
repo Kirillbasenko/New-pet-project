@@ -34,7 +34,7 @@ const LoginPage = () => {
    }
 
    const hendlerLodin = () => {
-      const auth = getAuth()
+      const auth = getAuth(app)
       signInWithEmailAndPassword(auth, formik.values.email, formik.values.password)
       .then(({user}) => { 
          dispatch(setUser({ 
