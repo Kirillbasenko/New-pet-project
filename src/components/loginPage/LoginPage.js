@@ -7,7 +7,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signI
 
 import {setUser} from "../../store/slices/userSlise"
 import "./loginPage.scss"
-import { app } from "../../fireBase";
+import { app, auth } from "../../fireBase";
 
 const LoginPage = () => {
    const dispatch = useDispatch(); 
@@ -16,7 +16,7 @@ const LoginPage = () => {
    const success = useRef("")
 
    async function signIn() {
-      const auth = getAuth(app);
+      //const auth = getAuth(app);
       let provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider)
       onAuthStateChanged(auth, (users) => {
@@ -34,7 +34,7 @@ const LoginPage = () => {
    }
 
    const hendlerLodin = () => {
-      const auth = getAuth()
+      //const auth = getAuth(app)
       signInWithEmailAndPassword(auth, formik.values.email, formik.values.password)
       .then(({user}) => { 
          dispatch(setUser({ 

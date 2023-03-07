@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import {useNavigate, Link} from 'react-router-dom' 
 import { useDispatch} from "react-redux";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { app } from "../../fireBase";
+import { app, auth } from "../../fireBase";
 
 import {useRef} from 'react';
 import {setUser} from "../../store/slices/userSlise"
@@ -17,7 +17,7 @@ const RegisterPage = () => {
    const success = useRef("")
 
    const hendlerRegister = () => {
-      const auth = getAuth()
+      //const auth = getAuth(app)
       createUserWithEmailAndPassword(auth, formik.values.email, formik.values.password)
       .then(({user}) => {
          success.current.style.display = "block"
