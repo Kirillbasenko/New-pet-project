@@ -16,7 +16,7 @@ const LoginPage = () => {
    const success = useRef("")
 
    async function signIn() {
-      const auth = getAuth(app);
+      const auth = getAuth();
       let provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider)
       onAuthStateChanged(auth, (users) => {
